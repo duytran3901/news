@@ -39,13 +39,13 @@ const userSlice = createSlice({
       state.value = action.payload;
       state.isLogin = true;
       localStorage.setItem("user", JSON.stringify(state.value));
-      localStorage.setItem("token", JSON.stringify(state.value.user.token));
+      localStorage.setItem("token", JSON.stringify(state.value.token));
     },
     loginUser: (state: UserState, action: PayloadAction<user>) => {
       state.value = action.payload;
       state.isLogin = true;
       localStorage.setItem("user", JSON.stringify(state.value));
-      localStorage.setItem("token", JSON.stringify(state.value.user.token));
+      localStorage.setItem("token", JSON.stringify(state.value.token));
     },
     updateUser: (state: UserState, action: PayloadAction<user>) => {
       if (localStorage.getItem("token")) {

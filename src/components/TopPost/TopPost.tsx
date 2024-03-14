@@ -16,7 +16,9 @@ export default function TopPost() {
       type: FEED.GLOBAL,
       payload: { limit: 198, offset: 0 },
     });
-  }, []);
+  }, [dispatch]);
+
+  if (feed === null) return
 
   const topArticles = Array.isArray(feed?.articles)
     ? [...feed.articles]

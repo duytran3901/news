@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, current } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ArticleDataReturn, feed, FeedState } from "../types";
 
 export const initialState: FeedState = {

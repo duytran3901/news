@@ -32,7 +32,7 @@ function* checkPwdSaga(action: PayloadAction<loginFormData>) {
 function* setUserSaga() {
   try {
     const response: userResponse = yield call(apiURL.get, "/user");
-    yield put(setUser(response.data.user));
+    yield put(setUser(response.data));
   } catch (error) {
     if (error instanceof AxiosError) {
       handleError(error.response?.data.errors);

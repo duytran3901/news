@@ -38,13 +38,13 @@ const ArticleDetailAction = ({ article, slug }: Prop) => {
           type: AUTHOR.FOLLOWAUTHOR,
           payload: article.author.username,
         });
-        dispatch({ type: ARTICLE.GETARTICLE, payload: { slug: slug } });
+        dispatch({ type: FEED.GETARTICLE, payload: { slug: slug } });
       } else {
         dispatch({
           type: AUTHOR.UNFOLLOWAUTHOR,
           payload: article.author.username,
         });
-        dispatch({ type: ARTICLE.GETARTICLE, payload: { slug: slug } });
+        dispatch({ type: FEED.GETARTICLE, payload: { slug: slug } });
       }
     } else {
       navigate("/login");

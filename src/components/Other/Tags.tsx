@@ -6,7 +6,11 @@ import { SyncLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
-export default function Tags({ setSelectedTag }) {
+type Props = {
+  setSelectedTag: any
+}
+
+export default function Tags({ setSelectedTag }: Props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -20,7 +24,7 @@ export default function Tags({ setSelectedTag }) {
     fetchTags();
   }, [fetchTags]);
 
-  const handleClick = (tag) => {
+  const handleClick = (tag: any) => {
     setSelectedTag(tag);
     navigate(`/tag/${tag}`);
   };
